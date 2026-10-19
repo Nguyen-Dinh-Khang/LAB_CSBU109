@@ -1,0 +1,80 @@
+/* src/App.css */
+body {
+  margin: 0;
+  background-color: #f4f7fd;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* NAVBAR HEADER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 16px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* NÚT TRÊN HEADER */
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #64748b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Nút của tab đang được chọn */
+.nav-btn.active {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* NỘI DUNG CHÍNH */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.page-title {
+  color: #4f46e5;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}

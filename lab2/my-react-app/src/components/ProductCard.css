@@ -1,0 +1,81 @@
+/* Container bao quanh thẻ card */
+.card {
+  position: relative;
+  width: 220px;
+  background-color: #ffffff;
+  border-radius: 20px; /* Góc bo lớn mềm mại */
+  padding: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); /* Đổ bóng nhẹ */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hiệu ứng nổi nhẹ khi di chuột */
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Phần hiển thị ảnh */
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Tạo khung vuông hoặc dùng height cố định */
+  object-fit: cover;
+  border-radius: 14px; /* Bo góc ảnh bên trong */
+  display: block;
+}
+
+/* Tiêu đề tên sản phẩm (Keyboard) */
+.card h3 {
+  margin: 14px 0 6px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111b2d; /* Màu xanh đen đậm */
+}
+
+/* Giá tiền (25 USD) */
+.card p {
+  margin: 0 0 14px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #5c6b84; /* Màu xám xanh nhẹ */
+}
+
+/* Badge trạng thái còn hàng / hết hàng */
+.stock {
+  align-self: flex-start; /* Nằm vừa vặn theo nội dung, canh lề trái */
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 9999px; /* Dạng viên thuốc tròn */
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Còn hàng (In stock - màu xanh lá cây nhạt) */
+.stock.in {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* Hết hàng (Sold out - màu đỏ/xám nhạt) */
+.stock.out {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Huy hiệu giảm giá / giá rẻ (nếu có) */
+.badge {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
